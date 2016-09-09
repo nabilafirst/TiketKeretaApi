@@ -1,16 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="id.sch.smktelkom_mlg.tugas01.xirpl4025.tiketkeretaapi.MainActivity">
+        android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:text="FORMULIR PEMESANAN TIKET"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:src="@drawable/kkk" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Lebih Aman dan Nyaman Naik Kereta Api"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewPenumpang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATA PENUMPANG"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextTahun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tahun Kelahiran"
+                android:inputType="number" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewJK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Laki-Laki" />
+
+            <RadioButton
+                android:id="@+id/radioButtonP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Perempuan" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewpnp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipe PNP" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/pnp" />
+
+        <TextView
+            android:id="@+id/textViewPerjalanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATA PERJALANAN"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewKelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBisnis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BISNIS" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEksekutif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EKSEKUTIF" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEkonomi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EKONOMI" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextAsal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Asal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tujuan" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextJam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jam" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/buttonOK"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgbtn"
+            android:text="PESAN"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textViewPesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            tools:text="Pesanan Anda Telah Berhasil!" />
+
+
+    </LinearLayout>
+</ScrollView>
